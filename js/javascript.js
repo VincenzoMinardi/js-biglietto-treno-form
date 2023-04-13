@@ -1,36 +1,41 @@
-const numberKm = parseInt('Salve, Quanti km deve percorrere?');
-console.log(numberKm);
+const numberKmElement = document.querySelector ('#number-km')
 
+const userAgeElement = document.querySelector ('#user-age')
 
-const userAge = parseInt("Perfetto! Mi dica la sua età");
-console.log(userAge);
+const generates = document.querySelector('#generates');
 
-const price =(0.21);
-console.log(price * numberKm);
+// console.log ('prova')
 
-const totalPrice =(numberKm * price)
+generates.addEventListener('click', function() {
 
- if (userAge < 18) {
+   // console.log ('prova2')
+const numberKm = parseInt(numberKmElement.value)
+
+const userAge = parseInt(userAgeElement.value)
+
+	
+	const price =(0.21);
+   console.log(price * numberKm);
+
+   const totalPrice =(numberKm * price)
+
+   if (userAge < 18) {
     console.log (  totalPrice - totalPrice * 20 / 100);
     document.getElementById ('price').innerHTML = ( ' ' + totalPrice - totalPrice * 20 / 100)
- }
- else if(userAge >= 65){
+   }
+   else if(userAge >= 65){
     console.log (  totalPrice - totalPrice * 40 / 100);
     document.getElementById ('price').innerHTML = ( ' ' + totalPrice - totalPrice * 40 / 100)
- }
+   }
  
- else {
+   else {
     console.log(totalPrice)
     document.getElementById ('price').innerHTML = ( ' ' + totalPrice)
- }
+   }
 
- const eleBtnRandom = document.querySelector('#generates');
-
-eleBtnRandom.addEventListener('click', function() {
-	console.log('');
-	const randomNumber = Math.random();
-	alert(randomNumber);
 });
+
+
 
 
 
