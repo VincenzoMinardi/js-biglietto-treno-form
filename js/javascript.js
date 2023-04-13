@@ -1,7 +1,8 @@
-const numberKm = parseInt(prompt('Salve, Quanti km deve percorrere?'));
+const numberKm = parseInt('Salve, Quanti km deve percorrere?');
 console.log(numberKm);
 
-const userAge = parseInt(prompt("Perfetto! Mi dica la sua età"));
+
+const userAge = parseInt("Perfetto! Mi dica la sua età");
 console.log(userAge);
 
 const price =(0.21);
@@ -22,6 +23,22 @@ const totalPrice =(numberKm * price)
     console.log(totalPrice)
     document.getElementById ('price').innerHTML = ( ' ' + totalPrice)
  }
+
+ const eleBtnRandom = document.querySelector('#generates');
+
+eleBtnRandom.addEventListener('click', function() {
+	console.log('');
+	const randomNumber = Math.random();
+	alert(randomNumber);
+});
+
+
+
+
+ 
+
+ 
+
 
 
 
